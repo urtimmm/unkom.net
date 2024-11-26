@@ -1,4 +1,4 @@
-body {
+#body {
    font-family: 'Manrope';
    font-size: 16px;
    background-color: #F3FDFF;
@@ -9,6 +9,7 @@ body {
    overflow: auto; /* Прокрутка включена по умолчанию */
    flex-direction: column;
    display: flex;
+   width: 100%;
 }
 
 
@@ -1040,7 +1041,7 @@ input[type="tel"]:hover{
       margin-left: 5px;
       margin-right: 5px;
    }
-   .burg-menu {
+   #burg-menu {
       display: flex;
    }
 }
@@ -1115,26 +1116,7 @@ input[type="tel"]:hover{
    transition: transform 0.4s ease-in-out;
  }
  
- .menu-items {
-   padding-top: 120px;
-   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-   height: 100vh;
-   width: 100%;
-   transform: translate(-150%);
-   display: flex;
-   flex-direction: column;
-   margin-left: -40px;
-   padding-left: 50px;
-   transition: transform 0.5s ease-in-out;
-   text-align: center;
-   display: none;
- }
- 
-  .menu-items li {
-   margin-bottom: 1.2rem;
-   font-size: 1.5rem;
-   font-weight: 500;
- }
+
  
 
  
