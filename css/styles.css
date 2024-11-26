@@ -25,8 +25,9 @@
 .navbar-inner-right a, .navbar-inner-left a {
    text-decoration: none;
    color: #ffffff;
-   font-size: 14px;
+   font-size: 16px;
    font-family: 'Manrope';
+   cursor:default;
 }
 .navbar-top .container {
 
@@ -46,9 +47,10 @@
    transition: opacity 1s ease;
 }
 .navbar-right-image {
-   width: 25px;
-   height: 25px;
+   width: 30px;
+   height: 30px;
    margin-left: 5px;
+   cursor: pointer;
   
 }
 @media (max-width: 500px) {
@@ -94,10 +96,11 @@ header .navbar-bottom {
    justify-content: center;
    width: 100%;
    height: 70px;
-   box-shadow: 0 3px 0 0 #000;
    background: #fcfcfc;
 }
-
+.button-news:hover {
+   box-shadow: 0 3px 0 0 #0000008c; /* Тень при наведении */
+}
 
 .button-tariff {
    display: flex;
@@ -186,6 +189,24 @@ header .navbar-bottom {
    margin-top: 140px; /* Чтобы контент не накладывался на нижнюю часть хедера */
 }
 
+.message {
+   position: absolute;
+   left: 60%;
+   top: -20px; /* Изначально спрятана за левым краем */
+   transform: translateY(-50%);
+   background-color: #f0f0f000;
+   padding: 10px 20px;
+   transition: top 0.3s ease; /* Анимация появления */
+   font-family: 'Martian Mono';
+   font-size: 14px;
+   font-weight: 200;
+ }
+
+
+ .message.visible {
+   top: 3.8%;
+   left: 60%; /* Появляется слева */
+ }
 
 /* стили для main */
 #main {
@@ -195,7 +216,7 @@ header .navbar-bottom {
    align-items: center;
 }
 
-selection {
+.selection {
    padding: 10px;
    box-sizing: border-box;
    transition: opacity 0.5s ease;
@@ -382,6 +403,7 @@ selection {
 }
 .form-container {
    position: fixed;
+   top: 50%;
    left: 50%;
    transform: translate(-50%, -50%) scale(0.8); /* Начальное состояние формы (уменьшена и сдвинута) */
    opacity: 0; /* Скрыта по умолчанию */
@@ -399,6 +421,7 @@ selection {
    margin: 0;
    font-family: 'Manrope';
    pointer-events: none;
+   overflow: hidden;
 
    
 }
@@ -419,6 +442,7 @@ selection {
    opacity: 1; /* Делаем форму видимой */
    transform: translate(-50%, -50%) scale(1);/* Форма становится видимой */
    pointer-events: auto;
+   overflow: hidden;
 }
 
  /* Когда форма открыта, показываем этот слой */
@@ -1044,6 +1068,24 @@ input[type="tel"]:hover{
    #burg-menu {
       display: flex;
    }
+   .message {
+      position: absolute;
+      left: 39%;
+      top: -20px; /* Изначально спрятана за левым краем */
+      transform: translateY(-50%);
+      background-color: #f0f0f000;
+      padding: 10px 20px;
+      transition: top 0.3s ease; /* Анимация появления */
+      font-family: 'Martian Mono';
+      font-size: 14px;
+      font-weight: 200;
+    }
+   
+   
+    .message.visible {
+      top: 3.8%;
+      left: 39%; /* Появляется слева */
+    }
 }
 @media (max-width: 1146px) {
    .ban {
@@ -1206,3 +1248,40 @@ input[type="checkbox"]:checked ~ .logo{
  .close-button {
    opacity: 0;
  }
+
+
+
+
+ /* Стили для блока новостей */
+
+
+
+
+ .tariff .detail-left,  .tariff .detail-right {
+   width: 600px;
+   height: 600px;
+
+ }
+ .tariff .detail-left {
+   margin-left: 20%;
+   
+ }
+ .tariff .detail-right {
+   margin-right: 20%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+ .tariff .inner-top, .tariff .inner-bottom  {
+   max-width: 100%;
+   height: 100%;
+   background-color: #fff;
+   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+   border-radius: 25px;
+ }
+.detail-left .container{
+   background-color: #fff;
+   height: 100%;
+   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+   border-radius: 25px;
+}
