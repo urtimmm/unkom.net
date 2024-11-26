@@ -965,8 +965,8 @@ input[type="tel"]:hover{
 
 @media (max-width: 1366px) {
    .tariffs-detail-left, .tariffs-detail-right {
-      width: 400px;
-      height: 400px;
+      width: 475px;
+      height: 450px;
    }
    .right-descr {
       font-size: 20px;
@@ -974,8 +974,27 @@ input[type="tel"]:hover{
    .left-descr {
       width: 150px;
    }
-
-   
+   .navbar-top .container {
+      max-width: 80%;
+   }
+   .navbar-bottom .container {
+      max-width: 80%;
+   }
+   .fram .inner {
+      width: 80%;
+   }
+   #pages-nam .container {
+      width: 80%;
+   }
+   .tariff .tariffs-detail-left {
+      margin-left: 10%;
+   }
+   .tariff .tariffs-detail-right {
+      margin-right: 10%;  
+   }
+   .footer .container {
+      width: 80%;
+   }
 }
 @media (max-width: 760px) {
    .body {
@@ -986,8 +1005,9 @@ input[type="tel"]:hover{
       align-items: normal;
    }
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
-      width: 90%;
+      width: 95%;
       height: 400px;
+      margin-left: 10px;
    }
    #pages-nam .container {
       flex-direction: column;
@@ -995,11 +1015,33 @@ input[type="tel"]:hover{
       padding: 0;
 
    }
+   .pages-nam {
+      display: none;
+   }
    #pages-nam .container a{
       padding: 0;
    }
    .navbar-bottom .navbar-inner-center {
       display: none;
+   }
+   .form-container.show {
+   opacity: 1;
+   transform: translate(0%, 0%) scale(1);
+   pointer-events: auto;
+
+   }
+   .form-container {
+      position: fixed;
+      left: 0;
+      top: 5%;
+      width: 100%;
+      transform: translate(0%, 0%) scale(0.8);
+      display: block;
+      margin-left: 5px;
+      margin-right: 5px;
+   }
+   .burg-menu {
+      display: flex;
    }
 }
 @media (max-width: 1146px) {
@@ -1016,3 +1058,169 @@ input[type="tel"]:hover{
       align-items: center;
    }
 }
+
+.burg-menu {
+
+   width: 50px;
+   height: 50px;
+   align-items: center;
+   margin-left: auto;
+   display: none;
+}
+
+.checkbox {
+   position: absolute;
+   display: block;
+   margin-left: auto;
+
+   height: 50px;
+   width: 50px;
+   z-index: 999;
+   opacity: 0;
+   cursor: pointer;
+   margin-left: auto; /* Сдвигает элемент вправо */
+   padding: 5px;
+   background-color: #000;
+ }
+ 
+.hamburger-lines {
+   height: 28px;
+   width: 35px;
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-left: auto;
+ }
+ 
+.hamburger-lines .line {
+   display: block;
+   height: 4px;
+   width: 100%;
+   border-radius: 10px;
+   background: #0e2431;
+ }
+ 
+  .hamburger-lines .line1 {
+   transform-origin: 0% 0%;
+   transition: transform 0.4s ease-in-out;
+ }
+ 
+  .hamburger-lines .line2 {
+   transition: transform 0.2s ease-in-out;
+ }
+ 
+ .hamburger-lines .line3 {
+   transform-origin: 0% 100%;
+   transition: transform 0.4s ease-in-out;
+ }
+ 
+ .menu-items {
+   padding-top: 120px;
+   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+   height: 100vh;
+   width: 100%;
+   transform: translate(-150%);
+   display: flex;
+   flex-direction: column;
+   margin-left: -40px;
+   padding-left: 50px;
+   transition: transform 0.5s ease-in-out;
+   text-align: center;
+   display: none;
+ }
+ 
+  .menu-items li {
+   margin-bottom: 1.2rem;
+   font-size: 1.5rem;
+   font-weight: 500;
+ }
+ 
+
+ 
+ input[type="checkbox"]:checked ~ .menu-items {
+   transform: translateX(0);
+ }
+ 
+ input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+   transform: rotate(45deg);
+ }
+ 
+input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+   transform: scaleY(0);
+ }
+ 
+ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+   transform: rotate(-45deg);
+ }
+ 
+input[type="checkbox"]:checked ~ .logo{
+   display: none;
+ }
+
+
+
+
+
+
+
+
+
+
+ .menu-container {
+   position: relative;
+ }
+ 
+ .menu-button {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   z-index: 1000;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+ }
+ 
+ .menu-overlay {
+   position: fixed;
+   margin-top: 35px;
+   right: -100%; /* Меню скрыто за экраном */
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.945); /* Полупрозрачный фон */
+   color: rgb(0, 0, 0);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: right 0.4s ease; /* Анимация появления */
+   z-index: 999;
+ }
+ 
+ .menu-overlay.open {
+   right: 0; /* Выдвигаем меню на экран */
+ }
+ 
+ .menu-content {
+   text-align: center;
+ }
+ 
+ .menu-content ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .menu-content li {
+   margin: 20px 0;
+ }
+ 
+ .menu-content a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   font-size: 20px;
+ }
+ 
+ .menu-content a:hover {
+   text-decoration: underline;
+ }
+ .close-button {
+   opacity: 0;
+ }
