@@ -1275,13 +1275,72 @@ input[type="checkbox"]:checked ~ .logo{
  .tariff .inner-top, .tariff .inner-bottom  {
    max-width: 100%;
    height: 100%;
-   background-color: #fff;
+   background-color: #DBF7FF;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    border-radius: 25px;
  }
 .detail-left .container{
-   background-color: #fff;
    height: 100%;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    border-radius: 25px;
+   width: 600px;
+   height: 600px;
+   background-color: #DBF7FF;
+   display: flex;
+   flex-direction: column;
+   
+
+}
+.tariff .inner-bottom-ind, .tariff .inner-top-ind {
+   width: 100%;
+   height: 50%;
+   display: flex;
+
+}
+.tariff .inner-top-ind {
+   display: flex;
+   justify-content: center;
+
+   
+}
+.tariff .inner-bottom-ind {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding-left: 50px;
+   padding-bottom: 50px;
+   padding-top: 60px;
+   width: auto;
+   font-family: 'Manrope';
+
+
+}
+.tariff .inner-bottom-ind p{
+   margin: 0;
+
+   margin-top: 15px;
+   padding: 0;
+}
+.tariff .date {
+   font-weight: 300;
+   font-size: 18px;
+   color: #1968a8;
+
+}
+.tariff .headline {
+   font-weight: 700;
+   font-size: 32px;
+   color: #008cc8;
+   margin-top: 25px;
+}
+.tariff .headline span{
+   font-weight: 800;
+   color: #f50000;
+}
+.tariff .article {
+   font-weight: 500;
+   margin-top: 20px;
+   font-size: 22px;
+   color: #0e3a5e;
+   text-decoration: none;
 }
