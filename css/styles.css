@@ -236,7 +236,6 @@ header .navbar-bottom {
    display: flex;
    width: 100%;
    height: auto;
-   margin-top: 15px;
    margin-bottom: 15px;
    justify-content: center; /* Горизонтальное центрирование */
    align-items: center; /* Вертикальное центрирование */
@@ -270,9 +269,9 @@ header .navbar-bottom {
 .tariffs-detail-left, .tariffs-detail-right {
    
    border-radius: 25px;
-   width: 525px;
-   height: 475px;
-   background-color: #fff;
+   width: 600px;
+   height: 600px;
+   background-color: #DBF7FF;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    display: flex;
    justify-content: center;
@@ -282,7 +281,7 @@ header .navbar-bottom {
    
 }
 .tariff .tariffs-detail-left {
-   background-image: url('/icon/back_tariff_left.png');
+   /* background-image: url('/icon/back_tariff_left.png'); */
    background-size: 100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -290,7 +289,7 @@ header .navbar-bottom {
 }
 
 .tariffs-detail-right {
-   background-image: url('/icon/back_tariff_right.png');
+   /* background-image: url('/icon/back_tariff_right.png'); */
    background-size:100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -499,17 +498,17 @@ body.no-scroll {
 
 .pages-nam {
    width: 100%;
-   height: 50px;
+   height: 75px;
    display: flex;
    justify-content: center;  /* Центрирование по горизонтали */
-   align-items: flex-end;  
+   align-items: center;  
+
 }
 
 
 #pages-nam .container {
    display: flex;
    width: 60%;
-   height: 30px;
    justify-content: flex-start;
    gap: 10px;
 
@@ -1315,9 +1314,22 @@ input[type="checkbox"]:checked ~ .logo{
 
 
 }
-.tariff .inner-bottom-ind p{
-   margin: 0;
+.tariff .inner-bottom-ind-right {
+   display: flex;
+   width: 100%;
+   height: 50%;
+   justify-content: center;
+   flex-direction: column;
+   padding-left: 50px;
+   padding-bottom: 50px;
+   padding-top: 75px;
+   width: auto;
+   font-family: 'Manrope';
 
+
+}
+.tariff .inner-bottom-ind p, .tariff .inner-bottom-ind-right p{
+   margin: 0;
    margin-top: 15px;
    padding: 0;
 }
@@ -1343,4 +1355,10 @@ input[type="checkbox"]:checked ~ .logo{
    font-size: 22px;
    color: #0e3a5e;
    text-decoration: none;
+}
+
+.tariff .article:hover {
+   text-decoration: underline;
+   color: #25709b;
+   transition: all 0.7s ease;
 }

@@ -35,8 +35,23 @@
               <a href="#">13:00-17:00</a>
            </div>
            <div class="navbar-inner-right">
-              <a href="#">Техподдержка 24/7</a>
-              <img src="icon/suppicon.png" alt="support-icon" class="navbar-right-image">
+              <a href="#" >Техподдержка 24/7</a>
+
+              <img src="icon/suppicon.png" alt="support-icon" class="navbar-right-image" id="showMessageLink">
+              <div class="message" id="messageBox">+7(949)-365-47-57</div>
+              <script>
+                 document.addEventListener("DOMContentLoaded", () => {
+                    const link = document.getElementById("showMessageLink");
+                    const messageBox = document.getElementById("messageBox");
+             
+                    link.addEventListener("click", (event) => {
+                       event.preventDefault();
+                     messageBox.classList.toggle("visible"); // Переключаем класс
+                 });
+
+                
+                 });
+               </script>
            </div>
         </div>
      </div>
@@ -47,14 +62,14 @@
               <span class="text-logo">UNKOM-NET</span>
            </div>
            <div class="navbar-inner-center">
-              <div class="button-news">
+              <div class="button-news" style="box-shadow: 0 3px 0 0 #000;">
               <a href="index.html">Новости</a>
               </div>
-              <div class="button-tariff" style="box-shadow: 0 3px 0 0 #000;">
+              <div class="button-tariff">
               <a href="tariffs.html">Тарифы</a>
               </div>
               <div class="button-services">
-              <a href="services.html">Услуги</a>
+              <a href="#">Услуги</a>
               </div>
               <div class="button-payment">
               <a href="#">Оплата</a>
@@ -102,12 +117,7 @@
            </div>
         </div>
      </div>
-     <div class="pages-nam" id="pages-nam">
-        <div class="container">
-           <a href="#" class="page-apart">Многоквартирные дома</a>
-           <a href="#" class="house">Частный сектор</a>
-     </div>
-     </div>
+
 
      <div class="background-blur" id="background-blur"></div>
      
@@ -193,38 +203,44 @@
      <script src="js/open-form.js"></script>
 
      
-     <div class="tariff">
+     <div class="tariff" style="margin-top: 75px;">
         <div class="container">
-           <selection class="tariffs-detail-left" id="left-selection">
-              <div class="tariff-descr">
-                 <div class="left-descr">
-                    <p class="max">МАКСИМАЛЬНЫЙ</p>
-                    <p class="prise">600<span class="rub-mes">руб/мес</span></p>
+           <selection class="detail-left" id="left-selection">
+              <div class="container">
+                 <div class="inner-top-ind">
+                    <img src="icon/Group 2.png" alt="">
+
                  </div>
-                 <div class="right-descr">
-                       <p><span class="nam">100</span>Мбит/с</p>
-                       <p><span class="nam">195</span>IPTV-канала</p>
+                 <div class="inner-bottom-ind">
+                    <p class="date"></p>
+                    <p class="headline">Ч</p>
+                    <a href="" class="article"></a>
+
                  </div>
               </div>
-              <button class="button-left" onclick="toggleForm()">
-                 ПОДКЛЮЧИТЬ
-              </button>
+              
 
            </selection>
-           <selection class="tariffs-detail-right" id="right-selection">
-              <div class="tariff-descr">
-                 <div class="left-descr">
-                    <p class="max">КОМФОРТ</p>
-                    <p class="prise">450<span class="rub-mes">руб/мес</span></p>
+           <selection class="detail-right" id="right-selection">
+              <div class="inner-top">
+                 <div class="inner-bottom-ind-right">
+                    <p class="date"></p>
+                    <p class="headline"></p>
+                    <a href="" class="article"></a>
+
                  </div>
-                 <div class="right-descr">
-                       <p><span class="nam">50</span>Мбит/с</p>
-                       <p><span class="nam">195</span>IPTV-канала</p>
-                 </div>
+
               </div>
-              <button class="button-left" onclick="toggleForm()">
-                 ПОДКЛЮЧИТЬ
-              </button>
+              <div class="inner-bottom">
+                 <div class="inner-bottom-ind-right">
+                    <p class="date"></p>
+                    <p class="headline"></p>
+                    <a href="" class="article"></a>
+
+                 </div>
+
+              </div>
+      
            </selection>
         </div>
      </div>
