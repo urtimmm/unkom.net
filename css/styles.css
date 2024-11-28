@@ -47,8 +47,8 @@
    transition: opacity 1s ease;
 }
 .navbar-right-image {
-   width: 30px;
-   height: 30px;
+   width: 40px;
+   height: 40px;
    margin-left: 5px;
    cursor: pointer;
   
@@ -1024,14 +1024,25 @@ input[type="tel"]:hover{
    .body {
       width: 100vh;
    }
+   .navbar-bottom .container, .navbar-top .container {
+      max-width: 90%;
+   }
    .tariff .container{
       flex-direction: column;
       align-items: normal;
+   }
+   .tariff .detail-left {
+      margin-left: 0%;
+      width: 95%;
+   }
+   .detail-left .container {
+
    }
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
       width: 95%;
       height: 400px;
       margin-left: 10px;
+      margin-top: 10px;
    }
    #pages-nam .container {
       flex-direction: column;
