@@ -409,7 +409,7 @@ header .navbar-bottom {
    opacity: 0; /* Скрыта по умолчанию */
    z-index: 1001;
    max-width: 600px;
-   height: 750px;
+   height: auto;
    background-color: #eef9ff;
    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
    border-radius: 8px;
