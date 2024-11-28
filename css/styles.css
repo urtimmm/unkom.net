@@ -236,6 +236,7 @@ header .navbar-bottom {
    display: flex;
    width: 100%;
    height: auto;
+   margin-top: 75px;
    margin-bottom: 15px;
    justify-content: center; /* Горизонтальное центрирование */
    align-items: center; /* Вертикальное центрирование */
@@ -281,7 +282,7 @@ header .navbar-bottom {
    
 }
 .tariff .tariffs-detail-left {
-   /* background-image: url('/icon/back_tariff_left.png'); */
+   background-image: url('/icon/back_tariff_left.png');
    background-size: 100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -289,7 +290,7 @@ header .navbar-bottom {
 }
 
 .tariffs-detail-right {
-   /* background-image: url('/icon/back_tariff_right.png'); */
+   background-image: url('/icon/back_tariff_right.png');
    background-size:100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -571,11 +572,12 @@ body.no-scroll {
 }
 .footer .inner-left {
    display: flex;
-   align-items:center;
+   padding-top: 10px;
    font-family: 'Manrope';
    font-weight: 300;
    font-size: 18px;
    flex-direction: column;
+   width: auto;
 }
 
 .footer .text-logo-footert {
@@ -594,6 +596,12 @@ body.no-scroll {
 footer .logo-footer {
    display: flex;
    justify-content: center;
+   
+ 
+}
+.footer .icon-footer {
+   width: 50px;
+   height: 50px;
 }
 .cl-btn-2 {
    margin-left: auto;
@@ -1024,6 +1032,9 @@ input[type="tel"]:hover{
    .body {
       width: 100vh;
    }
+   .tariff{
+      margin-top: 10px;
+   }
    .navbar-bottom .container, .navbar-top .container {
       max-width: 90%;
    }
@@ -1031,9 +1042,16 @@ input[type="tel"]:hover{
       flex-direction: column;
       align-items: normal;
    }
-   .tariff .detail-left {
+   .tariff .container .detail-left, .tariff .container .detail-right {
       margin-left: 0%;
+      display: flex;
       width: 95%;
+      margin-left: 10px;
+
+   }
+   .tariff .inner-top .inner-bottom-ind-right,.tariff .container .inner-bottom-ind, .tariff .inner-bottom .inner-bottom-ind-right {
+      padding-left: 30px;
+      padding-right: 30px;
    }
    .detail-left .container {
 
@@ -1069,7 +1087,7 @@ input[type="tel"]:hover{
       position: fixed;
       left: 0;
       top: 5%;
-      width: 100%;
+      width: 94%;
       transform: translate(0%, 0%) scale(0.8);
       display: block;
       margin-left: 5px;
@@ -1095,6 +1113,22 @@ input[type="tel"]:hover{
     .message.visible {
       top: 3.8%;
       left: 39%; /* Появляется слева */
+    }
+    .footer .container {
+      width: 90%;
+      display: flex;
+      justify-content: flex-start; /* Выравнивание по горизонтали */
+      align-items: flex-start; 
+    }
+    footer .logo-footer {
+      
+    }
+    .footer .container .inner-right {
+      align-items:normal ;
+
+    }
+    .footer .container .inner-right p{
+      margin-top: 5px;      
     }
 }
 @media (max-width: 1146px) {
