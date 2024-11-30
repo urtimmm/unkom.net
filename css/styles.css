@@ -1,7 +1,7 @@
 #body {
    font-family: 'Manrope';
    font-size: 16px;
-   background-color: #F3FDFF;
+   background-color: #f4fdff;
    margin: 0;
    padding: 0;
    height: auto;
@@ -56,9 +56,13 @@
   
 }
 #inner-centr {
-   background-color: #000000;
-   width: 100px;
-   height: 50px;
+
+   width: auto;
+   height:auto;
+   margin-top: 70px;
+   position: absolute;
+   left: 0;
+   margin-left: 40px;
 }
 @media (max-width: 500px) {
    .navbar-inner-right a {
@@ -284,17 +288,18 @@ header .navbar-bottom {
    border-radius: 25px;
    width: 600px;
    height: 600px;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    display: flex;
    justify-content: center;
-   align-items: end;
+   align-items: center;
    position: relative;
+   flex-direction: column;
 
    
 }
 .tariff .tariffs-detail-left {
-   background-image: url('/icon/back_tariff_left.png');
+   /* background-image: url('/icon/back_tariff_left.png'); */
    background-size: cover; /* Растянуть изображение, сохраняя пропорции */
    background-position: center; /* Центрировать изображение */
 
@@ -303,7 +308,7 @@ header .navbar-bottom {
 }
 
 .tariffs-detail-right {
-   background-image: url('/icon/back_tariff_right.png');
+   /* background-image: url('/icon/back_tariff_right.png'); */
    background-size:100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -325,6 +330,8 @@ header .navbar-bottom {
    text-decoration: none;
    color: #FAFAFA;
    cursor: pointer;
+   position: absolute;
+   bottom: 0; /* Прижимаем к нижнему краю */
 }
 
 .button-left:hover{
@@ -1065,13 +1072,11 @@ input[type="tel"]:hover{
       margin-left: 10px;
 
    }
-   .tariff .inner-top .inner-bottom-ind-right,.tariff .container .inner-bottom-ind, .tariff .inner-bottom .inner-bottom-ind-right {
-      padding-left: 30px;
-      padding-right: 30px;
+.tariff .container .inner-bottom-ind {
+      padding-left: 25px;
+      padding-right: 25px;
    }
-   .detail-left .container {
 
-   }
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
       width: 95%;
       height: 400px;
@@ -1335,9 +1340,11 @@ input[type="checkbox"]:checked ~ .logo{
  .tariff .inner-top, .tariff .inner-bottom  {
    max-width: 100%;
    height: 100%;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    border-radius: 25px;
+   padding: px;
+
  }
 .detail-left .container{
    height: 100%;
@@ -1345,7 +1352,7 @@ input[type="checkbox"]:checked ~ .logo{
    border-radius: 25px;
    width: 600px;
    height: 600px;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    display: flex;
    flex-direction: column;
    
@@ -1369,7 +1376,7 @@ input[type="checkbox"]:checked ~ .logo{
    flex-direction: column;
    padding-left: 50px;
    padding-bottom: 50px;
-   padding-top: 60px;
+
    width: auto;
    font-family: 'Manrope';
 
@@ -1377,34 +1384,27 @@ input[type="checkbox"]:checked ~ .logo{
 }
 .tariff .inner-bottom-ind-right {
    display: flex;
-   width: 100%;
-   height: 50%;
-   justify-content: center;
-   flex-direction: column;
-   padding-left: 50px;
-   padding-bottom: 50px;
-   padding-top: 75px;
    width: auto;
+   flex-direction: column;
    font-family: 'Manrope';
-
-
+   margin-left: 25px;
 }
-.tariff .inner-bottom-ind p, .tariff .inner-bottom-ind-right p{
-   margin: 0;
-   margin-top: 15px;
-   padding: 0;
-}
+
 .tariff .date {
    font-weight: 300;
    font-size: 18px;
    color: #1968a8;
+   margin-bottom: 5px;
 
 }
 .tariff .headline {
+   display: flex;
    font-weight: 700;
-   font-size: 32px;
+   font-size: 30px;
    color: #008cc8;
-   margin-top: 25px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+
 }
 .tariff .headline span{
    font-weight: 800;
@@ -1412,7 +1412,7 @@ input[type="checkbox"]:checked ~ .logo{
 }
 .tariff .article {
    font-weight: 500;
-   margin-top: 20px;
+   margin-top: 10px;
    font-size: 22px;
    color: #0e3a5e;
    text-decoration: none;

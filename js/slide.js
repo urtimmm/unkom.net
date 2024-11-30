@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <div class="inner-centr" id="inner-centr">
-               <p>dghkj</p>
+               <p>dghkjbbbbbbbbbbbbbbbbbbb</p>
                <p>dghj</p>
                <p>dghj</p>
                <p>dghj</p>
