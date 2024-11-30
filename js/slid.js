@@ -1,5 +1,6 @@
 const slidesContainer = document.querySelector('.slides');
 const slidese = document.querySelectorAll('.slide');
+const indicatorsContainer = document.querySelector('.indicators');
 
 let currentIndexу = 0;
 let isDragging = false;
@@ -7,21 +8,49 @@ let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let animationID;
-let startX = 0;
 
-// Функция обновления слайда
+// Создаем индикаторы
+slidese.forEach((_, index) => {
+  const indicator = document.createElement('div');
+  indicator.classList.add('indicator');
+  if (index === 0) indicator.classList.add('active');
+  indicator.addEventListener('click', () => goToSlide(index));
+  indicatorsContainer.appendChild(indicator);
+});
+
+const indicators = document.querySelectorAll('.indicator');
+
+// Функция обновления индикаторов
+function updateIndicators() {
+  indicators.forEach((indicator, index) => {
+    if (index === currentIndexу) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
+}
+
+// Функция обновления позиции
 function setSliderPosition() {
   slidesContainer.style.transform = `translateX(${currentTranslate}px)`;
 }
 
-// Функция фиксирования позиции
+// Фиксируем текущую позицию
 function setPositionByIndex() {
   currentTranslate = -currentIndexу * slidesContainer.offsetWidth;
   prevTranslate = currentTranslate;
   setSliderPosition();
+  updateIndicators(); // Обновляем индикаторы
 }
 
-// Событие начала касания или нажатия мыши
+// Перейти к определенному слайду
+function goToSlide(index) {
+  currentIndexу = index;
+  setPositionByIndex();
+}
+
+// Обработка начала касания или нажатия
 function touchStart(index, event) {
   isDragging = true;
   startPos = getPositionX(event);
@@ -31,14 +60,14 @@ function touchStart(index, event) {
   slidesContainer.classList.remove('smooth-transition');
 }
 
-// Событие перемещения касания или мыши
+// Обработка перемещения
 function touchMove(event) {
   if (!isDragging) return;
   const currentPosition = getPositionX(event);
   currentTranslate = prevTranslate + currentPosition - startPos;
 }
 
-// Событие завершения касания или отпускания мыши
+// Завершение касания или нажатия
 function touchEnd() {
   cancelAnimationFrame(animationID);
   isDragging = false;
@@ -56,18 +85,18 @@ function touchEnd() {
   setPositionByIndex();
 }
 
-// Получить позицию X (касание или мышь)
+// Получить позицию X
 function getPositionX(event) {
   return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
 }
 
-// Анимация во время перемещения
+// Анимация
 function animation() {
   setSliderPosition();
   if (isDragging) requestAnimationFrame(animation);
 }
 
-// Добавить обработчики событий для мыши и касания
+// События мыши и касания
 slidesContainer.addEventListener('touchstart', (e) => touchStart(currentIndexу, e));
 slidesContainer.addEventListener('touchend', touchEnd);
 slidesContainer.addEventListener('touchmove', touchMove);

@@ -1420,7 +1420,7 @@ input[type="checkbox"]:checked ~ .logo{
    transition: all 0.7s ease;
 }
 /* Контейнер для слайдера */
-.slider-container {
+.slider {
    position: relative;
    width: 100%;
    height: 300px; /* Задайте нужную высоту */
@@ -1465,3 +1465,24 @@ input[type="checkbox"]:checked ~ .logo{
    right: 10px;
  }
  
+ .indicators {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+ }
+ 
+ .indicator {
+   width: 10px;
+   height: 10px;
+   background-color: #ccc;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ .indicator.active {
+   background-color: #333;
+ }
