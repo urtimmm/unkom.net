@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unkom.net</title>
-
-
-
     <!--Шрифты с Google Fonts-->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +12,6 @@
     <!--Стили сайта-->
 
    <link rel="stylesheet" href="css/styles.css">
-
-    <!---->
-
     <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="icon/favicon.svg">
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -30,13 +24,10 @@
       <div class="navbar-top" id="navbarTop">
          <div class="container">
             <div class="navbar-inner-left">
-               <a href="#">ПН-ПТ</a>
-               <a href="#">8:00-12:00</a>
-               <a href="#">13:00-17:00</a>
+               <div id="slider-header"></div>
             </div>
             <div class="navbar-inner-right">
                <a href="#" >Техподдержка 24/7</a>
-
                <img src="icon/suppicon.png" alt="support-icon" class="navbar-right-image" id="showMessageLink">
                <div class="message" id="messageBox">+7(949)-365-47-57</div>
                <script>
@@ -48,8 +39,6 @@
                         event.preventDefault();
                       messageBox.classList.toggle("visible"); // Переключаем класс
                   });
-
-                 
                   });
                 </script>
             </div>
@@ -89,7 +78,6 @@
             <div class="menu-container">
                <div class="menu-overlay">
                  <div class="menu-content">
-
                    <ul>
                      <li><a href="index.html">Новости</a></li>
                      <li><a href="tariffs.html">Тарифы</a></li>
@@ -102,7 +90,6 @@
                </div>
              </div>
              <script src="js/burg-script.js"></script>
-             
          </div>
       </div>
    </header>
@@ -117,11 +104,14 @@
             </div>
          </div>
       </div>
-
-
+      <div class="slider-container">
+         <div class="slides">
+           <div class="slide ">Слайд 1</div>
+           <div class="slide">Слайд 2</div>
+           <div class="slide">Слайд 3</div>
+         </div>    
+       </div>
       <div class="background-blur" id="background-blur"></div>
-      
-
       <div class="form-container" id="form-container">
          <div class="form-top">
             <h3 style=" margin: 0 auto; margin-right: 0;">ЗАЯВКА НА ПОДКЛЮЧЕНИЕ</h3>
@@ -132,7 +122,6 @@
                <span class="close-btn" onclick="toggleForm()"></span>
             </div>
          </div>
-         
          </div>
           <form action="https://formspree.io/f/myzyjbkp" method="POST">
             <!-- Строка с полями для улицы, дома, квартиры -->
@@ -173,27 +162,21 @@
              <div class="submit-container">
                <input class="submit" type="submit" value="Отправить">
              </div>
-
           </form>
-
-
       </div>
       <script>// Получаем ссылки
          const apartBtn = document.getElementById("apartBtn");
          const houseBtn = document.getElementById("houseBtn");
-         
          // Функция для установки активного класса
          function setActiveLink(activeBtn, inactiveBtn) {
              activeBtn.classList.add("active");   // Добавляем активный класс выбранной кнопке
              inactiveBtn.classList.remove("active"); // Убираем активный класс с другой кнопки
          }
-         
          // Добавляем обработчики событий
          apartBtn.addEventListener("click", function (event) {
              event.preventDefault();
              setActiveLink(apartBtn, houseBtn); // "Квартира" становится активной
          });
-         
          houseBtn.addEventListener("click", function (event) {
              event.preventDefault();
              setActiveLink(houseBtn, apartBtn); // "Частный дом" становится активным
@@ -201,50 +184,38 @@
          </script>
       <script src="js/form-tar.js"></script>  
       <script src="js/open-form.js"></script>
-
-      
       <div class="tariff" >
          <div class="container">
             <selection class="detail-left" id="left-selection">
                <div class="container">
                   <div class="inner-top-ind">
                      <img src="icon/Group 2.png" alt="">
-
                   </div>
                   <div class="inner-bottom-ind">
                      <p class="date">27 ноября 2024</p>
                      <p class="headline">Чем заменить <span>YouTube?</span></p>
-                     <a href="" class="article">Приложения похожие на Ютуб...</a>
-
+                     <a  class="article">Приложения похожие на Ютуб...</a>
                   </div>
                </div>
-               
-
             </selection>
             <selection class="detail-right" id="right-selection">
                <div class="inner-top">
                   <div class="inner-bottom-ind-right">
                      <p class="date">29 ноября 2024</p>
                      <p class="headline">Как настроить IPTV?</p>
-                     <a href="" class="article">Подробная инструция настройки IPTV-каналов...</a>
-
+                     <a  class="article">Подробная инструция настройки IPTV-каналов...</a>
                   </div>
-
                </div>
                <div class="inner-bottom">
                   <div class="inner-bottom-ind-right">
                      <p class="date">27 ноября 2024</p>
                      <p class="headline">Уважаемые абоненты!</p>
-                     <a href="" class="article">Обновление договоров...</a>
-
+                     <a  class="article">Обновление договоров...</a>
                   </div>
-
                </div>
-       
             </selection>
          </div>
       </div>
-      <script src="js/slide.js"></script>
    </main>
    <footer class="footer">
       <div class="container">
@@ -263,5 +234,7 @@
          </div>
       </div>
    </footer>
+   <script src="/js/slide_news.js"></script>
+   <script src="/js/slid.js"></script>
  </body>
  </html>

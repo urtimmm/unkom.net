@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <p><span class="nam">195</span> IPTV-канала</p>
         </div>
       </div>
+      <div class="inner-centr" id="inner-centr">
+               <p>dghkj</p>
+               <p>dghj</p>
+               <p>dghj</p>
+               <p>dghj</p>
+              </div>
       <button class="button-left" onclick="toggleForm()">ПОДКЛЮЧИТЬ</button>
     `;
     
