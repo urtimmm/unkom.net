@@ -1,7 +1,7 @@
 #body {
    font-family: 'Manrope';
    font-size: 16px;
-   background-color: #F3FDFF;
+   background-color: #f4fdff;
    margin: 0;
    padding: 0;
    height: auto;
@@ -56,9 +56,32 @@
   
 }
 #inner-centr {
-   background-color: #000000;
-   width: 100px;
-   height: 50px;
+
+   width: auto;
+   height:auto;
+   margin-top: 70px;
+   position: absolute;
+   left: 0;
+   margin-left: 40px;
+   justify-content: space-between;
+   display: flex;
+   gap: 50px;
+   
+;
+}
+.inner-centr p {
+   font-family: 'Manrope';
+   font-size: 15px;
+   font-weight: 300;
+   margin: 0;
+   display: flex;
+   gap: 2px;
+   color: #242424;
+   cursor:default;
+}
+.inner-centr img{
+   width: 17px;
+   height: 17px;
 }
 @media (max-width: 500px) {
    .navbar-inner-right a {
@@ -284,17 +307,18 @@ header .navbar-bottom {
    border-radius: 25px;
    width: 600px;
    height: 600px;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    display: flex;
    justify-content: center;
-   align-items: end;
+   align-items: center;
    position: relative;
+   flex-direction: column;
 
    
 }
 .tariff .tariffs-detail-left {
-   background-image: url('/icon/back_tariff_left.png');
+   /* background-image: url('/icon/back_tariff_left.png'); */
    background-size: cover; /* Растянуть изображение, сохраняя пропорции */
    background-position: center; /* Центрировать изображение */
 
@@ -303,7 +327,7 @@ header .navbar-bottom {
 }
 
 .tariffs-detail-right {
-   background-image: url('/icon/back_tariff_right.png');
+   /* background-image: url('/icon/back_tariff_right.png'); */
    background-size:100% auto; /* Оставляем размеры изображения как есть */
    background-position: left bottom; /* Размещаем картинку в левом нижнем углу */
    background-repeat: no-repeat; /* Запрещаем повторение изображения */
@@ -325,6 +349,8 @@ header .navbar-bottom {
    text-decoration: none;
    color: #FAFAFA;
    cursor: pointer;
+   position: absolute;
+   bottom: 0; /* Прижимаем к нижнему краю */
 }
 
 .button-left:hover{
@@ -372,6 +398,7 @@ header .navbar-bottom {
 .left-descr p, .right-descr p {
    margin-bottom: 0;
    margin-top: 40px;
+   margin-bottom: 2px;
 }
 .prise {
    font-family: "Martian Mono", sans-serif;
@@ -379,7 +406,7 @@ header .navbar-bottom {
    line-height: 120%;
    letter-spacing: -0.05em;
    color: #000;
-   font-size: 28px;
+   font-size: 24px;
    margin-bottom: 5px;
    margin-right: 0;
 }
@@ -401,7 +428,6 @@ header .navbar-bottom {
    color: #000000;
    font-family: 'Manrope';
    font-size: 25px;
-   margin-bottom: 5px;
 }
 .right-descr p {
    margin: 0;
@@ -423,7 +449,7 @@ header .navbar-bottom {
    z-index: 1001;
    max-width: 600px;
    height: auto;
-   background-color: #eef9ff;
+   background-color: #f4fdff;
    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
    border-radius: 8px;
    transition: opacity 0.5s ease, transform 0.3s ease; /* Плавный переход */
@@ -561,6 +587,9 @@ body.no-scroll {
    font-size: 18px;
    display: flex;
    text-decoration: none;
+}
+#page-apart-mob, #house-mob {
+   display: none;
 }
 .footer {
    width: 100%;
@@ -875,7 +904,7 @@ input[type="tel"]:hover{
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    background-size: 100% 100%; /* Растягивает изображение, сохраняя пропорции */
    background-repeat: no-repeat; /* Отключает повторение изображения */
-   border: 2px solid #DCF4FF ; /* Изначально прозрачная рамка */
+   border: 2px solid #fcfcfc ; /* Изначально прозрачная рамка */
    outline: none; /* Убираем стандартную подсветку браузера */
    
 
@@ -1013,8 +1042,13 @@ input[type="tel"]:hover{
       width: 475px;
       height: 450px;
    }
-   .right-descr {
+   .right-descr, .rub-mes {
       font-size: 20px;
+   }
+   .left-descr p, .right-descr p {
+      margin-bottom: 0;
+      display: flex;
+   
    }
    .left-descr {
       width: 150px;
@@ -1048,6 +1082,12 @@ input[type="tel"]:hover{
    main .slider {
       display: block;
    }
+   .page-apart, .house {
+      display: none;
+   }
+   #page-apart-mob, #house-mob {
+      display: block;
+   }
    .tariff{
       margin-top: 10px;
    }
@@ -1065,13 +1105,17 @@ input[type="tel"]:hover{
       margin-left: 10px;
 
    }
-   .tariff .inner-top .inner-bottom-ind-right,.tariff .container .inner-bottom-ind, .tariff .inner-bottom .inner-bottom-ind-right {
-      padding-left: 30px;
-      padding-right: 30px;
+   .tariff-option-up, .tariff-option-down, .tariff-option-down-house, .tariff-option-up-house {
+      height: 135px;
    }
-   .detail-left .container {
+.tariff .container .inner-bottom-ind {
+      padding-left: 25px;
+      padding-right: 25px;
+   }
+   #inner-centr {
+      gap: 0;
+   }
 
-   }
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
       width: 95%;
       height: 400px;
@@ -1079,14 +1123,11 @@ input[type="tel"]:hover{
       margin-top: 10px;
    }
    #pages-nam .container {
-      flex-direction: column;
       gap: 5px;
       padding: 0;
 
    }
-   .pages-nam {
-      display: none;
-   }
+
    #pages-nam .container a{
       padding: 0;
    }
@@ -1136,9 +1177,7 @@ input[type="tel"]:hover{
       justify-content: flex-start; /* Выравнивание по горизонтали */
       align-items: flex-start; 
     }
-    footer .logo-footer {
-      
-    }
+
     .footer .container .inner-right {
       align-items:normal ;
 
@@ -1335,9 +1374,11 @@ input[type="checkbox"]:checked ~ .logo{
  .tariff .inner-top, .tariff .inner-bottom  {
    max-width: 100%;
    height: 100%;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    border-radius: 25px;
+   padding: px;
+
  }
 .detail-left .container{
    height: 100%;
@@ -1345,7 +1386,7 @@ input[type="checkbox"]:checked ~ .logo{
    border-radius: 25px;
    width: 600px;
    height: 600px;
-   background-color: #DBF7FF;
+   background-color: #fcfcfc;
    display: flex;
    flex-direction: column;
    
@@ -1369,7 +1410,7 @@ input[type="checkbox"]:checked ~ .logo{
    flex-direction: column;
    padding-left: 50px;
    padding-bottom: 50px;
-   padding-top: 60px;
+
    width: auto;
    font-family: 'Manrope';
 
@@ -1377,34 +1418,27 @@ input[type="checkbox"]:checked ~ .logo{
 }
 .tariff .inner-bottom-ind-right {
    display: flex;
-   width: 100%;
-   height: 50%;
-   justify-content: center;
-   flex-direction: column;
-   padding-left: 50px;
-   padding-bottom: 50px;
-   padding-top: 75px;
    width: auto;
+   flex-direction: column;
    font-family: 'Manrope';
-
-
+   margin-left: 25px;
 }
-.tariff .inner-bottom-ind p, .tariff .inner-bottom-ind-right p{
-   margin: 0;
-   margin-top: 15px;
-   padding: 0;
-}
+
 .tariff .date {
    font-weight: 300;
    font-size: 18px;
    color: #1968a8;
+   margin-bottom: 5px;
 
 }
 .tariff .headline {
+   display: flex;
    font-weight: 700;
-   font-size: 32px;
+   font-size: 30px;
    color: #008cc8;
-   margin-top: 25px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+
 }
 .tariff .headline span{
    font-weight: 800;
@@ -1412,7 +1446,7 @@ input[type="checkbox"]:checked ~ .logo{
 }
 .tariff .article {
    font-weight: 500;
-   margin-top: 20px;
+   margin-top: 10px;
    font-size: 22px;
    color: #0e3a5e;
    text-decoration: none;
@@ -1507,7 +1541,45 @@ input[type="checkbox"]:checked ~ .logo{
    padding-bottom: 60px;
    padding-right: 40px;
  }
- .slider .payment button {
+ .slider .persAcc {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   background-image: url(/icon/Frame15.png);
+   background-size: contain; /* Растянуть изображение, сохраняя пропорции */
+   background-position: center; /* Центрировать изображение */
+   background-repeat: no-repeat;
+   justify-content: flex-end; /* Прижимаем вниз */
+   align-items: flex-end; /* Прижимаем вправо */
+   padding-bottom: 60px;
+   padding-right: 40px;
+ }
+ .slider .tarr {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   background-image: url(/icon/Frame16.png);
+   background-size: contain; /* Растянуть изображение, сохраняя пропорции */
+   background-position: center; /* Центрировать изображение */
+   background-repeat: no-repeat;
+   justify-content: flex-start; /* Прижимаем вниз */
+   align-items: flex-end; /* Прижимаем вправо */
+   padding-bottom: 60px;
+   padding-left: 40px;
+ }
+ .slider .tarr button{
+   all: unset;
+   display: flex;
+   height: 40px;
+   width: 120px;
+   border-radius: 10px;
+   cursor: pointer;
+   background-color: #008cc8;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .slider .payment button, .slider .persAcc button {
    all: unset;
    display: flex;
    height: 40px;
@@ -1518,7 +1590,7 @@ input[type="checkbox"]:checked ~ .logo{
    align-items: center;
    justify-content: center;
  }
- .slider .payment button a {
+ .slider .payment button a, .slider .persAcc button a, .slider .tarr button a{
    color: #fff;
    text-decoration: none;
    font-size: 16px;

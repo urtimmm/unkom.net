@@ -29,15 +29,25 @@
   <header id="header">
      <div class="navbar-top" id="navbarTop">
         <div class="container">
-           <div class="navbar-inner-left">
-              <a href="#">ПН-ПТ</a>
-              <a href="#">8:00-12:00</a>
-              <a href="#">13:00-17:00</a>
-           </div>
-           <div class="navbar-inner-right">
-              <a href="#">Техподдержка 24/7</a>
-              <img src="icon/suppicon.png" alt="support-icon" class="navbar-right-image">
-           </div>
+         <div class="navbar-inner-left">
+            <div id="slider-header"></div>
+         </div>
+         <div class="navbar-inner-right">
+            <a href="#" >Техподдержка 24/7</a>
+            <img src="icon/suppicon.png" alt="support-icon" class="navbar-right-image" id="showMessageLink">
+            <div class="message" id="messageBox">+7(949)-365-47-57</div>
+            <script>
+               document.addEventListener("DOMContentLoaded", () => {
+                  const link = document.getElementById("showMessageLink");
+                  const messageBox = document.getElementById("messageBox");
+           
+                  link.addEventListener("click", (event) => {
+                     event.preventDefault();
+                   messageBox.classList.toggle("visible"); // Переключаем класс
+               });
+               });
+             </script>
+         </div> 
         </div>
      </div>
      <div class="navbar-bottom" id="navbarBottom">
@@ -250,5 +260,6 @@
         </div>
      </div>
   </footer>
+  <script src="/js/slide_news.js"></script>
 </body>
 </html>

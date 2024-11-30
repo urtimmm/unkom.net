@@ -26,11 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <div class="inner-centr" id="inner-centr">
-               <p>dghkj</p>
-               <p>dghj</p>
-               <p>dghj</p>
-               <p>dghj</p>
-              </div>
+        <div class="left"> 
+          <p><img src="/icon/galka.png" alt="">Реальный ip</p>
+          <p><img src="/icon/galka.png" alt="">Отложеный платеж</p>
+          <p><img src="/icon/galka.png" alt="">Онлайн поддержка 24/7</p>
+        </div>    
+        <div class="right"> 
+          <p><img src="/icon/zvezdochka.png" alt="">Подключение 500руб</p> 
+        </div> 
+      </div>
       <button class="button-left" onclick="toggleForm()">ПОДКЛЮЧИТЬ</button>
     `;
     
@@ -44,6 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <p><span class="nam">50</span> Мбит/с</p>
           <p><span class="nam">195</span> IPTV-канала</p>
         </div>
+      </div>
+            <div class="inner-centr" id="inner-centr">
+        <div class="left"> 
+          <p><img src="/icon/galka.png" alt="">Реальный ip</p>
+          <p><img src="/icon/galka.png" alt="">Отложеный платеж</p>
+          <p><img src="/icon/galka.png" alt="">Онлайн поддержка 24/7</p>
+        </div>    
+        <div class="right"> 
+          <p><img src="/icon/zvezdochka.png" alt="">Подключение 500руб</p> 
+        </div> 
       </div>
       <button class="button-left" onclick="toggleForm()">ПОДКЛЮЧИТЬ</button>
     `;
@@ -59,6 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <p><span class="nam">300</span> IPTV-канала</p>
         </div>
       </div>
+            <div class="inner-centr" id="inner-centr">
+        <div class="left"> 
+          <p><img src="/icon/galka.png" alt="">Реальный ip</p>
+          <p><img src="/icon/galka.png" alt="">Отложеный платеж</p>
+          <p><img src="/icon/galka.png" alt="">Онлайн поддержка 24/7</p>
+        </div>    
+        <div class="right"> 
+          <p><img src="/icon/zvezdochka.png" alt="">Подключение 500руб</p> 
+        </div> 
+      </div>
       <button class="button-left" onclick="toggleForm()">ПОДКЛЮЧИТЬ</button>
     `;
     
@@ -72,6 +96,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <p><span class="nam">30</span> Мбит/с</p>
           <p><span class="nam">100</span> IPTV-канала</p>
         </div>
+      </div>
+            <div class="inner-centr" id="inner-centr">
+        <div class="left"> 
+          <p><img src="/icon/galka.png" alt="">Реальный ip</p>
+          <p><img src="/icon/galka.png" alt="">Отложеный платеж</p>
+          <p><img src="/icon/galka.png" alt="">Онлайн поддержка 24/7</p>
+        </div>    
+        <div class="right"> 
+          <p><img src="/icon/zvezdochka.png" alt="">Подключение 500руб</p> 
+        </div> 
       </div>
       <button class="button-left" onclick="toggleForm()">ПОДКЛЮЧИТЬ</button>
     `;
