@@ -63,6 +63,7 @@
    position: absolute;
    left: 0;
    margin-left: 40px;
+<<<<<<< HEAD
    justify-content: space-between;
    display: flex;
    gap: 50px;
@@ -82,6 +83,8 @@
 .inner-centr img{
    width: 17px;
    height: 17px;
+=======
+>>>>>>> 6cde37c723778f2659f5c6c84d6aa81bbe59bceb
 }
 @media (max-width: 500px) {
    .navbar-inner-right a {
@@ -1105,6 +1108,7 @@ input[type="tel"]:hover{
       margin-left: 10px;
 
    }
+<<<<<<< HEAD
    .tariff-option-up, .tariff-option-down, .tariff-option-down-house, .tariff-option-up-house {
       height: 135px;
    }
@@ -1114,6 +1118,11 @@ input[type="tel"]:hover{
    }
    #inner-centr {
       gap: 0;
+=======
+.tariff .container .inner-bottom-ind {
+      padding-left: 25px;
+      padding-right: 25px;
+>>>>>>> 6cde37c723778f2659f5c6c84d6aa81bbe59bceb
    }
 
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
