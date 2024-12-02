@@ -1206,6 +1206,7 @@ input[type="tel"]:hover{
    
     .message.visible {
       top: 3.8%;
+   
       left: 39%; /* Появляется слева */
     }
     .footer .container {
