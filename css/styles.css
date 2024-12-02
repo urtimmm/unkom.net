@@ -118,6 +118,7 @@ header .navbar-bottom {
     position: relative;
     height: 70px;
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.25); /* Добавляем тень для отделения от контента */
+    z-index: 1;
 }
 .navbar-bottom.fixed {
    position: fixed;
@@ -203,6 +204,7 @@ header .navbar-bottom {
    font-weight: 400;
    font-size: 26px;
    color: #000;
+   cursor: default;
 }
 .navbar-bottom .navbar-inner-center {
    display: flex;
@@ -308,7 +310,7 @@ header .navbar-bottom {
    
    border-radius: 25px;
    width: 600px;
-   height: 600px;
+   height: 500px;
    background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    display: flex;
@@ -540,7 +542,7 @@ body.no-scroll {
 
 .pages-nam {
    width: 100%;
-   height: 75px;
+   height: 50px;
    display: flex;
    justify-content: center;  /* Центрирование по горизонтали */
    align-items: center;  
@@ -573,9 +575,12 @@ body.no-scroll {
    
 }
 #pages-nam .container a.active {
-   color: #0a557a; /* Синий цвет для активной ссылки */
-   text-decoration: underline; /* Подчеркивание активной ссылки */
+   color: #007eb4; /* Синий цвет для активной ссылки */
+   text-decoration: underline 1px; /* Подчеркивание активной ссылки */
+   font-weight: 900;
+   font-size: 24px;
 }
+
 
 .page-apart {
    color: #0a557a;
@@ -584,11 +589,17 @@ body.no-scroll {
    text-decoration: underline 2px; /* Подчеркнуть текст */
    text-underline-offset: 5px; 
 }
+.page-apart::before {
+   content: "Многоквартирные дома";
+}
 .house {
    color: #007fbe;
    font-size: 18px;
    display: flex;
    text-decoration: none;
+}
+.house::before{
+   content: "Частный сектор";
 }
 .footer {
    width: 100%;
@@ -903,7 +914,7 @@ input[type="tel"]:hover{
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    background-size: 100% 100%; /* Растягивает изображение, сохраняя пропорции */
    background-repeat: no-repeat; /* Отключает повторение изображения */
-   border: 2px solid #DCF4FF ; /* Изначально прозрачная рамка */
+   border: 2px solid #ffffff ; /* Изначально прозрачная рамка */
    outline: none; /* Убираем стандартную подсветку браузера */
    
 
@@ -1021,6 +1032,9 @@ input[type="tel"]:hover{
    color: #007bff; /* Синий цвет для активного состояния */
    text-underline-offset: 5px ; /* Подчеркивание текста */
 }
+.law-mob {
+   display: none;
+}
 
 @media (max-width: 1260px) {
    .tariff .container {
@@ -1068,6 +1082,16 @@ input[type="tel"]:hover{
    .footer .container {
       width: 80%;
    }
+   #inner-centr {
+      gap: 50px;
+   }
+   .tariff .container .detail-right {
+      margin-right: 10%;
+   }
+   .tariff .container .detail-left {
+      margin-left: 10%;
+   }
+
 }
 @media (max-width: 760px) {
    .body {
@@ -1082,7 +1106,14 @@ input[type="tel"]:hover{
    .navbar-bottom .container, .navbar-top .container {
       max-width: 90%;
    }
-   .tariff .container{
+   .tariff .container .inner-bottom-ind, .tariff .container .inner-top-ind {
+      height: 55%;
+   }
+   .tariff .container .inner-top, .tariff .container .inner-bottom {
+      height: 200px;
+   }
+   
+   .tariff .container {
       flex-direction: column;
       align-items: normal;
    }
@@ -1091,6 +1122,7 @@ input[type="tel"]:hover{
       display: flex;
       width: 95%;
       margin-left: 10px;
+      height: auto;
 
    }
    .prise {
@@ -1098,6 +1130,15 @@ input[type="tel"]:hover{
    }
    .rub-mes {
       font-size: 20px;
+   }
+   .page-apart, .house{
+      font-size: 20px;
+   }
+   .page-apart::before {
+      content: "Квартира";
+   }
+   .house::before{
+      content: "Дом";
    }
    .inner-centr .left, .inner-centr .right {
       display: flex;
@@ -1120,13 +1161,9 @@ input[type="tel"]:hover{
       margin-top: 10px;
    }
    #pages-nam .container {
-      flex-direction: column;
       gap: 5px;
       padding: 0;
 
-   }
-   .pages-nam {
-      display: none;
    }
    #pages-nam .container a{
       padding: 0;
@@ -1182,10 +1219,19 @@ input[type="tel"]:hover{
     }
     .footer .container .inner-right {
       align-items:normal ;
+      margin-top: 10px;
+
 
     }
     .footer .container .inner-right p{
-      margin-top: 5px;      
+      margin-top: 5px;
+      margin-bottom: 5px;     
+    }
+    .law {
+      display: none;
+    }
+    .law-mob {
+      display: block;
     }
 }
 @media (max-width: 1146px) {
@@ -1379,8 +1425,6 @@ input[type="checkbox"]:checked ~ .logo{
    background-color: #fcfcfc;
    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
    border-radius: 25px;
-   padding: px;
-
  }
 .detail-left .container{
    height: 100%;
@@ -1398,6 +1442,7 @@ input[type="checkbox"]:checked ~ .logo{
    width: 100%;
    height: 50%;
    display: flex;
+   gap: 10px;
 
 }
 .tariff .inner-top-ind {
@@ -1424,6 +1469,7 @@ input[type="checkbox"]:checked ~ .logo{
    flex-direction: column;
    font-family: 'Manrope';
    margin-left: 25px;
+   gap: 10px;
 }
 
 .tariff .date {
@@ -1560,7 +1606,7 @@ input[type="checkbox"]:checked ~ .logo{
    display: flex;
    width: 100%;
    height: 100%;
-   background-image: url(/icon/Frame16.png);
+   background-image: url(/icon/Frame16.jpg);
    background-size: contain; /* Растянуть изображение, сохраняя пропорции */
    background-position: center; /* Центрировать изображение */
    background-repeat: no-repeat;
@@ -1576,9 +1622,11 @@ input[type="checkbox"]:checked ~ .logo{
    width: 120px;
    border-radius: 10px;
    cursor: pointer;
-   background-color: #F50000;
+   background-color: #008cc8;
    align-items: center;
    justify-content: center;
+   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+
  }
 
  .slider .payment button, .slider .persAcc button {
@@ -1591,6 +1639,8 @@ input[type="checkbox"]:checked ~ .logo{
    background-color: #F50000;
    align-items: center;
    justify-content: center;
+   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+
  }
  .slider .payment button a, .slider .persAcc button a, .slider .tarr button a {
    color: #fff;
