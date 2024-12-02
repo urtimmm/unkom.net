@@ -56,6 +56,8 @@
   
 }
 #inner-centr {
+   display: flex;
+   justify-content: space-between;
 
    width: auto;
    height:auto;
@@ -63,28 +65,26 @@
    position: absolute;
    left: 0;
    margin-left: 40px;
-<<<<<<< HEAD
-   justify-content: space-between;
-   display: flex;
-   gap: 50px;
-   
-;
-}
-.inner-centr p {
+
    font-family: 'Manrope';
    font-size: 15px;
-   font-weight: 300;
-   margin: 0;
-   display: flex;
-   gap: 2px;
-   color: #242424;
-   cursor:default;
+   gap: 100px;
 }
-.inner-centr img{
+.inner-centr .left, .inner-centr .right {
+   display: flex;
+   gap: 15px;
+   flex-direction: column;
+}
+.inner-centr .left p, .inner-centr .right p {
+   display: flex;
+   margin: 0;
+   gap: 2px;
+}
+
+#inner-centr img{
    width: 17px;
    height: 17px;
-=======
->>>>>>> 6cde37c723778f2659f5c6c84d6aa81bbe59bceb
+
 }
 @media (max-width: 500px) {
    .navbar-inner-right a {
@@ -96,7 +96,6 @@
 }
 .navbar-top .navbar-inner-left  {
    display: flex;
-
    justify-content: center;
    align-items: center;
    white-space: pre-wrap;
@@ -401,7 +400,6 @@ header .navbar-bottom {
 .left-descr p, .right-descr p {
    margin-bottom: 0;
    margin-top: 40px;
-   margin-bottom: 2px;
 }
 .prise {
    font-family: "Martian Mono", sans-serif;
@@ -409,7 +407,7 @@ header .navbar-bottom {
    line-height: 120%;
    letter-spacing: -0.05em;
    color: #000;
-   font-size: 24px;
+   font-size: 28px;
    margin-bottom: 5px;
    margin-right: 0;
 }
@@ -431,6 +429,7 @@ header .navbar-bottom {
    color: #000000;
    font-family: 'Manrope';
    font-size: 25px;
+   margin-bottom: 5px;
 }
 .right-descr p {
    margin: 0;
@@ -452,7 +451,7 @@ header .navbar-bottom {
    z-index: 1001;
    max-width: 600px;
    height: auto;
-   background-color: #f4fdff;
+   background-color: #eef9ff;
    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
    border-radius: 8px;
    transition: opacity 0.5s ease, transform 0.3s ease; /* Плавный переход */
@@ -590,9 +589,6 @@ body.no-scroll {
    font-size: 18px;
    display: flex;
    text-decoration: none;
-}
-#page-apart-mob, #house-mob {
-   display: none;
 }
 .footer {
    width: 100%;
@@ -907,7 +903,7 @@ input[type="tel"]:hover{
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    background-size: 100% 100%; /* Растягивает изображение, сохраняя пропорции */
    background-repeat: no-repeat; /* Отключает повторение изображения */
-   border: 2px solid #fcfcfc ; /* Изначально прозрачная рамка */
+   border: 2px solid #DCF4FF ; /* Изначально прозрачная рамка */
    outline: none; /* Убираем стандартную подсветку браузера */
    
 
@@ -1045,13 +1041,8 @@ input[type="tel"]:hover{
       width: 475px;
       height: 450px;
    }
-   .right-descr, .rub-mes {
+   .right-descr {
       font-size: 20px;
-   }
-   .left-descr p, .right-descr p {
-      margin-bottom: 0;
-      display: flex;
-   
    }
    .left-descr {
       width: 150px;
@@ -1085,12 +1076,6 @@ input[type="tel"]:hover{
    main .slider {
       display: block;
    }
-   .page-apart, .house {
-      display: none;
-   }
-   #page-apart-mob, #house-mob {
-      display: block;
-   }
    .tariff{
       margin-top: 10px;
    }
@@ -1108,21 +1093,24 @@ input[type="tel"]:hover{
       margin-left: 10px;
 
    }
-<<<<<<< HEAD
-   .tariff-option-up, .tariff-option-down, .tariff-option-down-house, .tariff-option-up-house {
-      height: 135px;
+   .prise {
+      font-size: 24px;
    }
-.tariff .container .inner-bottom-ind {
-      padding-left: 25px;
-      padding-right: 25px;
+   .rub-mes {
+      font-size: 20px;
+   }
+   .inner-centr .left, .inner-centr .right {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      margin-right: 10px;
    }
    #inner-centr {
-      gap: 0;
-=======
+      gap: 0px;
+   }
 .tariff .container .inner-bottom-ind {
       padding-left: 25px;
       padding-right: 25px;
->>>>>>> 6cde37c723778f2659f5c6c84d6aa81bbe59bceb
    }
 
    .tariff .tariffs-detail-left, .tariff .tariffs-detail-right {
@@ -1132,11 +1120,14 @@ input[type="tel"]:hover{
       margin-top: 10px;
    }
    #pages-nam .container {
+      flex-direction: column;
       gap: 5px;
       padding: 0;
 
    }
-
+   .pages-nam {
+      display: none;
+   }
    #pages-nam .container a{
       padding: 0;
    }
@@ -1186,7 +1177,9 @@ input[type="tel"]:hover{
       justify-content: flex-start; /* Выравнивание по горизонтали */
       align-items: flex-start; 
     }
-
+    footer .logo-footer {
+      
+    }
     .footer .container .inner-right {
       align-items:normal ;
 
@@ -1548,9 +1541,9 @@ input[type="checkbox"]:checked ~ .logo{
    justify-content: flex-end; /* Прижимаем вниз */
    align-items: flex-end; /* Прижимаем вправо */
    padding-bottom: 60px;
-   padding-right: 40px;
+   padding-right: 40px;   
  }
- .slider .persAcc {
+ .slider .persAcc{
    display: flex;
    width: 100%;
    height: 100%;
@@ -1561,7 +1554,7 @@ input[type="checkbox"]:checked ~ .logo{
    justify-content: flex-end; /* Прижимаем вниз */
    align-items: flex-end; /* Прижимаем вправо */
    padding-bottom: 60px;
-   padding-right: 40px;
+   padding-right: 40px;  
  }
  .slider .tarr {
    display: flex;
@@ -1574,20 +1567,20 @@ input[type="checkbox"]:checked ~ .logo{
    justify-content: flex-start; /* Прижимаем вниз */
    align-items: flex-end; /* Прижимаем вправо */
    padding-bottom: 60px;
-   padding-left: 40px;
+   padding-left: 40px;  
  }
- .slider .tarr button{
+ .slider .tarr button {
    all: unset;
    display: flex;
    height: 40px;
    width: 120px;
    border-radius: 10px;
    cursor: pointer;
-   background-color: #008cc8;
+   background-color: #F50000;
    align-items: center;
    justify-content: center;
  }
- 
+
  .slider .payment button, .slider .persAcc button {
    all: unset;
    display: flex;
@@ -1599,7 +1592,7 @@ input[type="checkbox"]:checked ~ .logo{
    align-items: center;
    justify-content: center;
  }
- .slider .payment button a, .slider .persAcc button a, .slider .tarr button a{
+ .slider .payment button a, .slider .persAcc button a, .slider .tarr button a {
    color: #fff;
    text-decoration: none;
    font-size: 16px;
